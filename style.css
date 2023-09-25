@@ -3,13 +3,12 @@
 
 /*Colores */
 :root {
-  --azul_fuerte:  #183651;/*#042c46;*/
-  --verde:        #00705e;
+  --azul_fuerte:  #183651;
+  --blanco:       #f5f6f7;
   --naranja:      #ff5e00;
-  --crema:        #ffffb3;
-  --Titulo1:        'Fugaz One';
-  --Titulo2:        'Kalam', cursive;
-  --Titulo3:       'Courier Prime', monospace;
+  --Titulo1:      'Fugaz One';
+  --Titulo2:      'Kalam', cursive;
+  --Titulo3:      'Courier Prime', monospace;
 }
 
 html {
@@ -20,15 +19,12 @@ html {
 
 .navbar {
   padding: 1rem 2rem;
-  background-color: #f5f6f7;
-  /*position:fixed;*/
+  background-color: var(--blanco)
 }
-
-/* aria-current="page" */
 
 .navbar-collapse {
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between; 
 }
 
 .nav-link:hover {
@@ -63,7 +59,7 @@ h1 {
 .seccion-titulo {
   font-size: 2rem;
   padding: 15px 0;
-  font-family: var(--Titulo1);/*'Rubik Dirt', cursive;*/
+  font-family: var(--Titulo1);
 }
 
 .seccion-descripcion {
@@ -86,7 +82,7 @@ h1 {
 .btn-info:hover {
   background-color: var(--naranja);
   border-color: var(--naranja);
-  color: #f5f6f7;
+  color: var(--blanco);
 }
 
 .texto-negro {
@@ -100,7 +96,7 @@ h1 {
 /* Seccion Hero */
 
 .hero {
-  background-color: #f5f6f7;
+  background-color: var(--blanco);
   min-height: 450px;
   text-align: center;
 }
@@ -118,7 +114,7 @@ h1 {
 .hero-principal h1 {
   font-family: var(--Titulo2);
   font-weight: bold;
-  color: var(--verde);
+  color: var(--azul_fuerte)
 }
 
 .hero-principal h2 {
@@ -129,27 +125,20 @@ h1 {
 /* Sobre mi */
 
 .sobre-mi {
-  height: 500px;
-  padding: 10px;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.6)), url(imagenes/neuro.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  color: #0a0a23;
-  font-weight: bold;*/
+  height: 400px;
+  padding: 15px;
 }
 
 .sobre-mi .contenedor {
   max-width: 600px;
   text-align: center;
-  /**/
 }
 
 /* Experiencia */
 
 .experiencia {
   padding: 40px 40px 60px 40px;
-  background-color: #f5f6f7;
+  background-color: var(--blanco);
   
 }
 
@@ -174,7 +163,7 @@ h1 {
 .experiencia i {
   font-size: 2.5rem;
   color: var(--naranja);
-  background-color: #f5f6f7;
+  background-color: var(--blanco);
   padding: 8px 19px;
   border-radius: 50%;
 }
@@ -192,17 +181,14 @@ h1 {
 }
 
 .badge {
-  margin: 5px;
-  /*background-color: # ;*/
-  
+  margin: 5px; 
 }
-
 
 /* Proyectos */
 
 .proyectos-recientes {
   padding: 40px;
-  background-color: #f5f6f7;
+  background-color: var(--blanco);
 }
 
 .proyectos-recientes img {
@@ -260,12 +246,11 @@ h1 {
   margin: 10px;
 }
 
-
 /* Testimonios */
 
 .testimonios {
   padding: 40px 40px 40px 40px;
-  background-color: #f5f6f7;
+  background-color: var(--blanco);
   
 }
 
@@ -274,7 +259,7 @@ h1 {
 }
 
 .carousel-item {
-  height: 500px;
+  height: 600px;
 }
 
 .carousel-item .container {
@@ -314,7 +299,7 @@ h1 {
 
 .testimonio-info .cargo {
   font-size: 0.9rem;
-  color: #656060;
+  color: var(--naranja);
 }
 
 /* Contacto */
@@ -327,9 +312,9 @@ h1 {
 
 .contacto .rectangulo {
   margin-top: -8rem;
-  background-color: var(--verde);
+  background-color: var(--naranja);
   border-radius: 10px;
-  box-shadow: 0px 1px 3px 1px #f5f6f7;
+  box-shadow: 0px 1px 3px 1px var(--blanco);
 }
 
 .contacto .row {
@@ -354,9 +339,13 @@ h1 {
   transition: all 0.2s ease-in-out;
 }
 
+.contacto a {
+  text-decoration: none;
+}
+
 .contacto button:hover {
   background-color: white;
-  color: var(--verde);
+  color: var(--naranja);
 }
 
 .contacto button i {
@@ -366,7 +355,7 @@ h1 {
 }
 
 .contacto button:hover i {
-  color: var(--verde);
+  color: var(--naranja);
 }
 
 /* Pie de pagina (footer) */
@@ -441,6 +430,10 @@ footer {
 @media screen and (max-width: 767px) {
   .navbar-brand {
     display: none;
+  }
+
+  .navbar{
+    background-color: var(--blanco);
   }
 }
 
